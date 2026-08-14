@@ -5,7 +5,7 @@ const conexao = mysql.createConnection({
     host: "localhost",
     user: "root",
     password: "root",
-    database: "escola",
+    database: "escola"
 })
  
 //Dados que serão cadastrados

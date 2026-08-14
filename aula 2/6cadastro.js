@@ -29,7 +29,7 @@ conexao.query(insert,[titulo, ano], function (erro) {
 })
  
 //ID do aluno que será excluído
-/*const id = 1;
+const id = 1;
 const deletar = "DELETE FROM  filmes WHERE id = ?";
  
 conexao.query(deletar, [id], function (erro, resultado) {

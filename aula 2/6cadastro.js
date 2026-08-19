@@ -9,8 +9,8 @@ const conexao = mysql.createConnection({
 })
  
 //Dados que serão cadastrados
-const titulo = "Interestelar";
-const ano = 2014;
+const titulo = "John Wick";
+const ano = 2017;
  
 //Comandos SQL
 const insert = "INSERT INTO filmes (titulo, ano) VALUES (?,?)";
@@ -22,14 +22,14 @@ conexao.query(insert,[titulo, ano], function (erro) {
         console.log("Erro ao cadastrar.");
         console.log(erro);
     } else {
-        console.log("filme cadastrado com sucesso!");
+        console.log("Filme cadastrado com sucesso!");
     }
  
     conexao.end();
 })
  
 //ID do aluno que será excluído
-const id = 1;
+const id = 5;
 const deletar = "DELETE FROM  filmes WHERE id = ?";
  
 conexao.query(deletar, [id], function (erro, resultado) {

@@ -22,7 +22,7 @@ conexao.query(insert,[titulo,autor], function (erro) {
         console.log("Erro ao cadastrar.");
         console.log(erro);
     } else {
-        console.log("livro cadastrado com suceso!");
+        console.log("livro cadastrado com sucesso!");
     }
 
     conexao.end();

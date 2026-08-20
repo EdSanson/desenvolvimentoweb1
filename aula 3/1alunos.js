@@ -7,18 +7,21 @@ const conexão = mysql.createConnection({
 host: "localhost",
 user: "root",
 password: "root",
-database: "escola"
+database: "escola1"
 });
 
 // Função para cadastrar o aluno
 function cadastrarAluno() {
 
     const nome = readline.question("Digite o nome do Aluno; ");
-    const email = readline.question("digite o email do Aluno: ");
+    const email = readline.question("Digite o email do Aluno: ");
+    const endereco = readline.question("Digite o Endereco do aluno: ");
+    const matricula = readline.question("Digite a matricula do aluno: ");
+    const curso = readline.question("Digite o curso do aluno: ");
+    const serie = readline.question("Digite a Serie: ");
+    const insert = "INSERT INTO alunos (nome, email, endereco, matricula, curso, serie) VALUES (?,?,?,?,?,?)";
 
-    const insert = "INSERT INTO alunos (nome, email) VALUES (?,?)";
-
-    conexão.query(insert,[nome,email], function(erro) {
+    conexão.query(insert,[nome,email,endereco, matricula, curso,serie], function(erro) {
 
         if (erro) {
             console.log("Erro no cadastro.");

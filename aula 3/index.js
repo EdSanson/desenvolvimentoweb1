@@ -18,7 +18,7 @@ function cadastrarAluno() {
 
     const insert = "INSERT INTO alunos (nome, email) VALUES (?,?)";
 
-    conexão.query(insert,[nome,email], function(erro) {
+    conexao.query(insert,[nome,email], function(erro) {
 
         if (erro) {
             console.log("Erro no cadastro.");
@@ -41,7 +41,7 @@ function excliurAluno() {
 
         if (erro) {
             console.log("Erro ao excluir o aluno. ");
-        }else if (resultado.affectedRows ===0) {
+        }else if (resultado.affectedRows === 0) {
             console.log("Aluno não encontrado.");
         }else {
             console.log("aluno excluido com sucesso!");

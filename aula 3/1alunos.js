@@ -1,9 +1,9 @@
 const mysql = require("mysql2");
-const { CONNREFUSED } = require("node:dns");
+
 const readline = require("readline-sync");
 
 //conexão com MYSQL
-const conexão = mysql.createConnection({
+const conexao = mysql.createConnection({
 host: "localhost",
 user: "root",
 password: "root",
@@ -21,7 +21,7 @@ function cadastrarAluno() {
     const serie = readline.question("Digite a Serie: ");
     const insert = "INSERT INTO alunos (nome, email, endereco, matricula, curso, serie) VALUES (?,?,?,?,?,?)";
 
-    conexão.query(insert,[nome,email,endereco, matricula, curso,serie], function(erro) {
+    conexao.query(insert,[nome,email,endereco, matricula, curso,serie], function(erro) {
 
         if (erro) {
             console.log("Erro no cadastro.");
@@ -32,6 +32,7 @@ function cadastrarAluno() {
         
         menu()
     });
+    
 }
 // função para excluir aluno
 function excliurAluno() {
@@ -40,14 +41,14 @@ function excliurAluno() {
 
     const deletar = "DELETE FROM alunos WHERE id = ?";
 
-    conexão.query(deletar, [id], function (erro,resultado) {
+    conexao.query(deletar, [id], function (erro,resultado) {
 
         if (erro) {
             console.log("Erro ao excluir o aluno. ");
-        }else if (resultado.affectedRows ===0) {
+        }else if (resultado.affectedRows === 0) {
             console.log("Aluno não encontrado.");
         }else {
-            console.log("aluno excluido com sucesso!");
+            console.log("Aluno excluido com sucesso!");
         }
 
         menu();
@@ -60,15 +61,15 @@ function listarAlunos() {
 
     const sql = "SELECT * FROM alunos";
 
-    conexão.query(sql, function (erro,alunos) {
+    conexao.query(sql, function (erro,alunos) {
 
         if (erro) {
             console.log("Erro ao buscar alunos.");
         } else {
             console.log("\n--- ALUNOS ---");
             alunos.forEach(function(aluno) {
-                console.log(
-                    aluno.id +" - " +
+                console.log( 
+                    aluno.id +" - " + 
                     aluno.nome + " - " +
                     aluno.email
                 );
@@ -105,7 +106,7 @@ function menu() {
 
         console.log("Programa encerrado.");
 
-        conexão.end();
+        conexao.end();
 
     } else {
 

@@ -8,3 +8,13 @@ CREATE TABLE clientes (
 );
 
 SELECT * FROM clientes;
+
+CREATE TABLE funcionarios (
+	id INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
+    nome VARCHAR (100) not null,
+    cargo VARCHAR (100) NOT NULL
+    
+);
+
+SELECT * FROM funcionarios;
+

@@ -14,7 +14,7 @@ database: "locadora"
 function cadastrarFilmes() {
 
     
-        const titulo = readline.question("Digite o titulo do filme; ");
+        const titulo = readline.question("Digite o titulo do filme:0 ");
         const ano = readline.question("Digite o ano do filme: ");
 
         const insert = "INSERT INTO filmes(titulo, ano) VALUES (?,?)";
@@ -64,7 +64,7 @@ function listarFilmes() {
             console.log("Erro ao buscar filmes.");
         } else {
             console.log("\n--- FILMES ---");
-            clientes.forEach(function(filme) {
+            filmes.forEach(function(filme) {
                 console.log(
                     filme.id +" - " +
                     filme.titulo + " - " +

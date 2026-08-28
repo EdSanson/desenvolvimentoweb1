@@ -8,3 +8,4 @@ create Table cursos(
 );
 
 SELECT * FROM cursos;
+

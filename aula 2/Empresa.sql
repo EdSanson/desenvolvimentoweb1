@@ -18,3 +18,27 @@ CREATE TABLE funcionarios (
 
 SELECT * FROM funcionarios;
 
+CREATE TABLE computadores (
+ id INT AUTO_INCREMENT PRIMARY KEY,
+ patrimonio VARCHAR(50),
+ localizacao VARCHAR(100)
+ );
+ 
+ SELECT * FROM computadores;
+ 
+ CREATE TABLE eventos ( 
+ id INT AUTO_INCREMENT PRIMARY KEY,
+ nome VARCHAR(100),
+ data_evento DATE
+ );
+ 
+  SELECT * FROM eventos;
+  
+  CREATE TABLE veiculos (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  modelo VARCHAR(100),
+  placa VARCHAR(20)
+  );
+  
+   SELECT * FROM veiculos; 
+ 

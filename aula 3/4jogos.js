@@ -56,7 +56,7 @@ function excliurJogo() {
 // Função para listar Jogo
 function listarJogo() {
 
-    const sql = "SELECT * FROM jogos";
+    const sql = "SELECT * FROM filmes";
 
     conexao.query(sql, function (erro,jogos) {
 

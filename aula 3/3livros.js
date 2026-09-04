@@ -15,7 +15,7 @@ function cadastrarLivro() {
 
     
         const titulo = readline.question("Digite o titulo do Livro: ");
-        const autor = readline.question("Digite o autor do livro: ");
+        const autor = readline.question("Digite o autor do Livro: ");
 
         const insert = "INSERT INTO livros(titulo, autor) VALUES (?,?)";
 
@@ -32,16 +32,17 @@ function cadastrarLivro() {
         });
 }
 // função para excluir livro
-function excliurLivro() {
+function excluirLivro() {
 
     const id = readline.question("Digite o ID do livro: ");
 
-    const deletar = "DELETE FROM produtos WHERE id = ?";
+    const deletar = "DELETE FROM livros WHERE id = ?";
 
     conexao.query(deletar, [id], function (erro,resultado) {
 
         if (erro) {
             console.log("Erro ao excluir o Livro. ");
+            console.log(erro);
         }else if (resultado.affectedRows === 0) {
             console.log(" Livro não encontrado.");
         }else {
@@ -82,7 +83,7 @@ function menu() {
     console.log("\n===== BIBLIOTECA =====");
     console.log("1 - Cadastrar Livro");
     console.log("2 - Excluir Livro");
-    console.log("3 - Listar Livro");
+    console.log("3 - Listar Livros");
     console.log("0 - Sair");
 
     const opcao = readline.questionInt("Escolha uma opcao: ");
@@ -93,7 +94,7 @@ function menu() {
 
     }else if (opcao === 2 ) {
 
-        excliurLivro();
+        excluirLivro();
 
     } else if (opcao === 3 ) {
 

@@ -14,21 +14,26 @@ database: "biblioteca"
 function cadastrarTarefa() {
 
     const descricao = readline.question("Digite a descricao da tarefa: ");
-    const responsavel = readline.question("digite o responsavel pela tarefa: ");
+    if (descricao === "") {
+            console.log("Impossivel cadastrar sem descricao!");
+    
 
-    const insert = "INSERT INTO tarefas (descricao, responsavel) VALUES (?,?)";
+        const responsavel = readline.question("digite o responsavel pela tarefa: ");
 
-    conexao.query(insert,[descricao,responsavel], function(erro) {
+        const insert = "INSERT INTO tarefas (descricao, responsavel) VALUES (?,?)";
 
-        if (erro) {
+        conexao.query(insert,[descricao,responsavel], function(erro) {
+
+         if (erro) {
             console.log("Erro no cadastro.");
             console.log(erro);
-        }else {
+         }else {
             console.log("tarefa cadastrada com sucesso!");
-        }
+            }
      
         menu()
-    });
+        });
+    }
 }
 
 // função para excluir tarefa

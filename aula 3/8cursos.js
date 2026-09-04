@@ -61,13 +61,14 @@ function listarCursos() {
 
         if (erro) {
             console.log("Erro ao buscar cursos.");
+            console.log(erro);
         } else {
             console.log("\n--- CURSOS ---");
             cursos.forEach(function(curso) {
                 console.log(
                     curso.id +" - " +
                     curso.curso + " - " +
-                    curso.carga_horaria
+                    curso.carga_horaria ,"horas"
                 );
             });
         }

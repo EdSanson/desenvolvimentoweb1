@@ -56,7 +56,7 @@ function excliurFilme() {
 // Função para listar filmes
 function listarFilmes() {
 
-    const sql = "SELECT * FROM filmes";
+    const sql = "SELECT * FROM filmes ORDER BY titulo ASC";
 
     conexao.query(sql, function (erro,filmes) {
 
@@ -82,7 +82,7 @@ function menu() {
     console.log("\n===== FilmES =====");
     console.log("1 - Cadastrar filme");
     console.log("2 - Excluir filme");
-    console.log("3 - Listar filme");
+    console.log("3 - Listar filmeS");
     console.log("0 - Sair");
 
     const opcao = readline.questionInt("Escolha uma opcao: ");

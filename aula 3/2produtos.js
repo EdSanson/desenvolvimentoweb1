@@ -15,7 +15,7 @@ function cadastrarProduto() {
 
         const nome = readline.question("Digite o nome do Produto; ");
         const preco = readline.question("Digite o preco do produto: ");
-        const quantidade = readline.question("Digite a quantidade do produto: ");
+        const quantidade = readline.question("Digite a quantidade em estoque: ");
 
         const insert = "INSERT INTO produtos(nome, preco, quantidade) VALUES (?,?,?)";
 

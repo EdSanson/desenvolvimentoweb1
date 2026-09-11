@@ -64,7 +64,7 @@ function excliurVeiculo() {
 // Função para listar Veiculos
 function listarVeiculos() {
 
-    const sql = "SELECT * FROM veiculos";
+    const sql = "SELECT * FROM ";
 
     conexao.query(sql, function (erro,veiculos) {
 

@@ -1,5 +1,5 @@
 const mysql = require("mysql2");
-const { CONNREFUSED } = require("node:dns");
+
 const readline = require("readline-sync");
 
 //conexão com MYSQL

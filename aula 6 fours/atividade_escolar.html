@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios HTML</title>
+</head>
+    <body>
+
+        <form method="post" action="" onsubmit="alert('Atividade enviada com sucesso!')">
+        
+            <h2>  Entrega de Atividade Escolar  </h2>
+            <p> Formulário </p>
+            <label> Nome Estudante:</label> <br>
+            <input type="text" name="login" placeholder= "estudante" required><br> <br>
+             <label> Insira seu email:</label> <br>
+            <input type="email" name="email" placeholder="Insira seu email:" required><br> <br>
+            <p>Data e Horário da Entrega: </p>
+            <input type="datetime-local" name="bdaytime">
+            
+                                         
+            <p>Disciplina: </p>
+            
+            <input type="radio"
+                    id="banco de dados"
+                    name="disciplina"
+                    value="banco de dados"
+                    required>
+            <label for=" banco de dados">Banco de Dados</label> <br>
+
+            <input type="radio"
+                    id="programação"
+                    name="disciplina"
+                    value="programação"
+                    required>
+            <label for=" programação">Programação</label> <br>
+
+            <input type="radio"
+                    id="desenvolvimento web"
+                    name="disciplina"
+                    value="desenvolvimento web"
+                    required>
+            <label for="desenvolvimento web">Desenvolvimento Web</label> <br>
+
+            <input type="radio"
+                    id="análise de dados"
+                    name="disciplina"
+                    value="análise de dados"
+                    required>
+            <label for="análise de dados">Análise de Dados</label> <br><br>
+
+             <p> Tipo de atividade: </p>
+
+              <input type="radio"
+                    id="trabalho individual"
+                    name="atividade"
+                    value="trabalho individual"
+                    required>
+            <label for="trabalho individual">Trabalho individual</label> <br><br>
+
+              <input type="radio"
+                    id="trabalho em equipe"
+                    name="atividade"
+                    value="trabalho em equipe"
+                    required>
+            <label for="trabalho em equipe">Trabalho em equipe</label> <br><br>
+
+              <input type="radio"
+                    id="recuperação"
+                    name="atividade"
+                    value="recuperação"
+                    required>
+            <label for="recuperação">Recuperação</label> <br><br>
+
+              <input type="radio"
+                    id="projeto"
+                    name="atividade"
+                    value="projeto"
+                    required>
+            <label for="projeto">Projeto</label> <br><br>
+
+              <input type="radio"
+                    id="arquivos da atividade"
+                    name="atividade"
+                    value="arquivos da atividade"
+                    required>
+            <label for="arquivos da atividade">Arquivos da atividade</label> <br><br>
+
+              <p> Envio de arquivo/comprovante:</p>
+            <input type="file" name="arquivos" multiple required>> <br> <br>
+          
+           
+            Nível de dificuldade da atividade:<br>
+            Pouca dificuldade
+            <input type="range" name="satisfacao" min="0" max="10">
+            Muita dificuldade <br><br>
+
+                              
+             <label> Comentários para o Professor:</label> <br>
+            <textarea name="comentario" placeholder= "Comentários sobre o atendimento..."
+            style="width:400px;height: 100px;"></textarea><br> <br>
+
+             <input type="radio"
+                    id="confirmo"
+                    name="confirmado"
+                    value="confirmo"
+                    required>
+            <label for="confirmo">Confirmo que os arquivos enviados são de minha autoria</label> <br><br>
+            
+            <input type="submit" value="Enviar Atividade">
+            
+            
+
+        </form>
+        
+    </body>
+</html>

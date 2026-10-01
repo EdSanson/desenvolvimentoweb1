@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios HTML</title>
+</head>
+    <body>
+
+        <form method="post" action="" onsubmit="alert('Solicitação de agendamento enviada!')">
+        
+            <h2>  Agendamento de Atendimento Médico </h2>
+            <p> Dados do paciente </p>
+            <label> Nome Paciente:</label> <br>
+            <input type="text" name="login" placeholder= "Nome do Paciente" required><br> <br>
+            <label> Email:</label> <br>
+            <input type="email" name="email" placeholder="E-mail do paciente:" required><br> <br>
+        
+            <p> Data de nascimento:</p>
+            <input type="date" name="nascimento"><br> <br>
+
+            <p>Data e horário de atendimento Desejado: </p>
+            <input type="datetime-local"name="bdaytime">
+            
+            <p>Tipo de Atendimento</p>
+            
+            <input type="radio"
+                    id="Consulta de Rotina"
+                    name="consulta"
+                    value="rotina"
+                    required>
+            <label for=" consulta de rotina">Consulta de Rotina</label> <br>
+
+            <input type="radio"
+                    id="Consulta de Retorno"
+                    name="consulta"
+                    value="Consulta de Retorno"
+                    required>
+            <label for=" consulta de retorno">Consulta de Retorno</label> <br><br>
+
+            <p>Exames:</p>
+            <input type="radio"
+                    id="Sim"
+                    name="exames"
+                    value="sim"
+                    required>
+            <label for="sim">Sim</label> <br>
+            <input type="radio"
+                    id="Não"
+                    name="exames"
+                    value="nao"
+                    required>
+                    <label for="nao">Não</label> <br><br>
+    
+            <p>Atendimento prioritário:</p>
+            <input type="radio"
+                    id="Sim"
+                    name="prioritario"
+                    value="sim"
+                    required>
+            <label for="sim">Sim</label> <br>
+            <input type="radio"
+                    id="Não"
+                    name="prioritario"
+                    value="nao"
+                    required>
+                    <label for="nao">Não</label> <br><br>
+           
+
+            Nível de dor ou desconforto:<br><br>
+            Pouca dor ou desconforto
+            <input type="range" name="satisfacao" min="0" max="10">
+            Muita dor ou desconforto <br><br>
+
+            <p> Envio de Exames:</p>
+            <input type="file" name="exames" multiple>> <br> <br>
+            
+                        
+             <label> Descreva os Sintomas:</label> <br>
+            <textarea name="comentario" placeholder= "Sintomas..."
+            style="width:400px;height: 100px;"></textarea><br> <br>
+
+             <p>Autorizo o uso dos meus dados para fins de agendamento:</p>
+            <input type="radio"
+                    id="Sim"
+                    name="prioritario"
+                    value="sim"
+                    required>
+            <label for="sim">Sim</label> <br>
+            <input type="radio"
+                    id="Não"
+                    name="prioritario"
+                    value="nao"
+                    required>
+                    <label for="nao">Não</label> <br><br>
+            
+            <input type="submit" value="Solicitar o Agendamento">
+            
+            
+
+        </form>
+        
+    </body>
+</html>

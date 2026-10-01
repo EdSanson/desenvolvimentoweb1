@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios HTML</title>
+</head>
+    <body>
+
+        <form method="post" action="" onsubmit="alert('Cadastro realizado com sucesso!')">
+        
+            <h2>  Bem-vindo ao sistema!</h2>
+            <p> Insira seus dados para logar</p>
+
+
+            <label> Insira seu nome completo:</label> <br>
+            <input type="text" name="login" placeholder= "Insira seu nome" required><br> <br>
+            <label> Insira seu email:</label> <br>
+            <input type="email" name="email" placeholder="Insira seu email:" required><br> <br>
+            <label> Insira sua senha:</label> <br>
+            <input type= "password" nome= "senha" placeholder= "Insira sua senha" required><br> <br>
+            <p> Data de nascimento:</p>
+            <input type="date" name="nascimento"><br> <br>
+            
+
+                   
+
+            <p>Qual é o seu sexo?</p>
+            <input type="radio"
+                    id="feminino"
+                    name="sexo"
+                    value="feminino"
+                    required>
+            <label for=" feminino">Feminino</label> <br>
+             <input type="radio"
+                    id="masculino"
+                    name="sexo"
+                    value="masculino"
+                    required>
+            <label for="masculino">Masculino</label> <br>
+            <input type="radio"
+                    id="nao-informar"
+                    name="sexo"
+                    value="nao informar">
+            <label for="nao informar">Prefiro nao informar</label> <br><br>
+
+            <p> Minha cor preferida:</p>
+            <input type="color" name="favcor"value="#0000FF"> <br>
+           <P> Deixe um comentário/observação sobre o cadastro:</P>
+
+            <textarea></textarea><br>
+            <p> Envie uma foto de perfil:</p>
+            <input type="file" name="arquivos"> <br> <br>
+
+            <input type="submit" value="Finaliza Cadastro">
+            
+            
+
+        </form>
+        
+    </body>
+</html>

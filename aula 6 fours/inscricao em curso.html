@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios HTML</title>
+</head>
+    <body>
+
+        <form method="post" action="" onsubmit="alert('Inscrição enviada com sucesso!')">
+        
+            <h2>  Sistema de Inscrição em Curso </h2>
+            <p> Insira seus dados </p>
+
+
+            <label> Insira seu Nome Completo:</label> <br>
+            <input type="text" name="login" placeholder= "Insira seu nome" required><br> <br>
+            <label> Insira seu email:</label> <br>
+            <input type="email" name="email" placeholder="Insira seu email:" required><br> <br>
+            <label> Insira sua senha:</label> <br>
+            <input type= "password" nome= "senha" placeholder= "Insira sua senha" required><br> <br>
+            <p> Data de nascimento:</p>
+            <input type="date" name="nascimento"><br> <br>
+            
+            <p>Qual o Curso Desejado?</p>
+            
+            <input type="radio"
+                    id="Desenvolvimento de Sistemas"
+                    name="curso"
+                    value="desenvolvimento"
+                    required>
+            <label for=" desenvolvimento">Desenvolvimento de Sistemas</label> <br>
+
+            <input type="radio"
+                    id="Administração"
+                    name="curso"
+                    value="administração"
+                    required>
+            <label for=" administração">Administração</label> <br>
+
+            <input type="radio"
+                    id="Recursos Humanos"
+                    name="curso"
+                    value="recursos humanos"
+                    required>
+            <label for=" recursos humanos">Recursos Humanos</label> <br>
+
+            <input type="radio"
+                    id="Ciência de Dados"
+                    name="curso"
+                    value="ciência de dados"
+                    required>
+            <label for=" ciência de dados">Ciência de Dados</label> <br>
+           
+           
+            <p>Turno:</p>
+            <input type="radio"
+                    id="Matutino"
+                    name="turno"
+                    value="matutino"
+                    required>
+            <label for=" matutino">Matutino</label> <br>
+            <input type="radio"
+                    id="vespertino"
+                    name="turno"
+                    value="vespertino"
+                    required>
+                    <label for="vespertino">Vespertino</label> <br>
+            <input type="radio"
+                     id="noturno"
+                    name="turno"
+                    value="noturno"
+                    required>
+                    <label for="noturno">Noturno</label> <br><br>
+
+            Defina seu nível de satisfação com o transporte público:<br><br>
+            Pouco Interessado
+            <input type="range" name="satisfacao" min="0" max="10">
+            Muito Interessado <br><br>
+
+            <p> Envio de arquivo/comprovante:</p>
+            <input type="file" name="arquivos" multiple>> <br> <br>
+            
+                        
+             <label> Escreva por que deseja fazer este curso:</label> <br>
+            <textarea name="comenttario" placeholder= "Insira seu comentário..."
+            style="width:400px;height: 100px;"></textarea><br> <br>
+            
+            <input type="submit" value="Realizar Inscrição">
+            
+            
+
+        </form>
+        
+    </body>
+</html>

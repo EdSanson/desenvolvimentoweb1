@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios HTML</title>
+</head>
+    <body>
+
+        <form method="post" action="" onsubmit="alert('Animal cadastrado com sucesso!')">
+        
+            <h2>  Cadastro de Animal em Clínica Veterinária  </h2>
+
+            <p> Dados do responsável </p>
+            <label> Nome do responsável:</label> <br>
+            <input type="text" name="login" placeholder= "Nome do responsável" required><br> <br>
+            <label> Email do responsável:</label> <br>
+            <input type="email" name="email do responsável" placeholder="E-mail do responsável:" required><br> <br>
+            <label> Nome do Animal:</label> <br>
+            <input type="text" name="login" placeholder= "Nome do Animal" required><br> <br>
+            <p> Data de nascimento do Animal:</p>
+            <input type="date" name="nascimento"><br> <br>
+
+            <p>Data e horário de atendimento Desejado: </p>
+            <input type="datetime-local"name="bdaytime">
+            
+            <p>Tipo de Animal:</p>
+            
+            <input type="radio"
+                    id="Cachorro"
+                    name="animal"
+                    value="cachorro"
+                    required>
+            <label for=" cachorro">Cachorro</label> <br>
+
+            <input type="radio"
+                    id="Gato"
+                    name="animal"
+                    value="gato"
+                    required>
+            <label for=" gato">Gato</label> <br>
+
+            <input type="radio"
+                    id="Ave"
+                    name="animal"
+                    value="ave"
+                    required>
+            <label for="ave">Ave</label> <br>
+
+            <input type="radio"
+                    id="Coelho"
+                    name="animal"
+                    value="coelho"
+                    required>
+            <label for="coelho">Coelho</label> <br>
+
+            <input type="radio"
+                    id="Outro"
+                    name="animal"
+                    value="outro"
+                    required>
+            <label for=" outro">Outro</label> <br><br>
+
+            <p>Sexo do Animal:</p>
+            <input type="radio"
+                    id="Femea"
+                    name="sexo"
+                    value="femea"
+                    required>
+            <label for="femea">Fêmea</label> <br>
+            <input type="radio"
+                    id="Macho"
+                    name="sexo"
+                    value="macho"
+                    required>
+            <label for="macho">Macho</label> <br>
+            <input type="radio"
+                    id="nao identificado"
+                    name="sexo"
+                    value="nao indentificado"
+                    required>
+            <label for="nao identificado">Não Identificado</label> <br><br>
+    
+            <p> Cor predominante do Animal:</p>
+            <input type="color" name="favcor"value="#0000FF"> <br><br>       
+            
+            <p> Envio de fotos do Animal:</p>
+            <input type="file" name="fotos" multiple>> <br> <br>
+            
+                        
+            <label> Descrição sobre o comportamento e estado de saúde:</label> <br>
+            <textarea name="comentario" placeholder= "Sintomas..."
+            style="width:400px;height: 100px;"></textarea><br> <br>
+
+            
+            
+            <input type="submit" value="Cadastrar">
+            
+            
+
+        </form>
+        
+    </body>
+</html>

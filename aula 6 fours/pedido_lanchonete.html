@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios HTML</title>
+</head>
+    <body>
+
+        <form method="post" action="" onsubmit="alert('Pedido registrado com sucesso!')">
+        
+            <h2>  Pedido de uma Lanchonete   </h2>
+            <p> Formulário </p>
+            <label> Nome do Cliente:</label> <br>
+            <input type="text" name="login" placeholder= "Cliente" required><br> <br>
+             <label> Email:</label> <br>
+            <input type="email" name="email" placeholder="E-mail do paciente:" required><br> <br>
+
+            <p>Data e horário do pedido: </p>
+            <input type="datetime-local"name="bdaytime">
+            
+                                         
+            <p>Tipo do pedido:</p>
+            
+            <input type="radio"
+                    id="consumir no local"
+                    name="forma"
+                    value="consumir no local"
+                    required>
+            <label for="consumir no local">Consumir no local</label> <br>
+
+            <input type="radio"
+                    id="Retirada"
+                    name="forma"
+                    value="Retirada"
+                    required>
+            <label for=" retirada">Retirada</label> <br>
+
+            <input type="radio"
+                    id="Entrega"
+                    name="forma"
+                    value="Entrega"
+                    required>
+            <label for="entrega">Entrega</label> <br><br>
+
+             <p> Lanches:</p>
+            <input type="checkbox" name="consumo1" value="hamburguer">
+            Hamburguer<br>
+            <input type="checkbox" name="consumo2" value="cachorro-quente">
+            Cachorro-quente<br>
+            <input type="checkbox" name="consumo3" value="pizza">
+            Pizza<br>
+            <input type="checkbox" name="consumo4" value="batata frita">
+            Batata frita<br><br>
+
+            <p> Opcionais:</p>
+             <input type="checkbox" name="opcional1" value="sem cebola">
+            Sem cebola<br>
+            <input type="checkbox" name="opcional2" value="sem tomate">
+            Sem tomate<br>
+            <input type="checkbox" name="opcional3" value="sem queijo">
+            Sem queijo<br>
+            <input type="checkbox" name="opcional4" value="molho separado">
+            Molho separado<br><br>
+
+            <p> Bebidas:</p>
+            <input type="checkbox" name="consumo5" value="refrigerante">
+            Refrigerante<br>
+            <input type="checkbox" name="consumo6" value="suco">
+            Suco<br>
+                      
+            <p> Cor preferida para a embalagem:</p>
+            <input type="color" name="favcor"value="#0000FF"> <br><br>
+
+             <p>Quantidade de itens,(1 e 15):</p>
+            <input type="number"name="quantidade" min="1" max="15"><br> <br>
+                    
+             <label> Observaçoes para o pedido:</label> <br>
+            <textarea name="comentario" placeholder= "Comentários sobre o atendimento..."
+            style="width:400px;height: 100px;"></textarea><br> <br>
+            
+            <input type="submit" value="Confirmar Pedido">
+            
+            
+
+        </form>
+        
+    </body>
+</html>

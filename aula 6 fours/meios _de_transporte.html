@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios HTML</title>
+</head>
+    <body>
+
+        <form method="post" action="" onsubmit="alert('Obrigado por participar da pesquisa!')">
+        
+            <h2>  Bem-vindo ao sistema!</h2>
+            <p> Pesquisa sobre Meios de Transporte utilizados na cidade: </p>
+
+
+            <label> Insira seu Nome do Participante:</label> <br>
+            <input type="text" name="nome" placeholder= "Insira seu nome" required><br> <br>
+             <p> Data de nascimento:</p>
+            <input type="date" name="nascimento"><br> <br>
+            
+            <p> Meios de transporte:</p>
+            <input type="checkbox" name="veiculo1" value="bicicleta">
+            Bicicleta<br>
+            <input type="checkbox" name="veiculo2" value="carro">
+            Carro<br>
+            <input type="checkbox" name="veiculo3" value="moto">
+            Moto<br>
+            <input type="checkbox" name="veiculo4" value="onibus">
+            Ônibus<br>
+            <input type="checkbox" name="veiculo5" value="App transporte">
+            Aplicativo de transporte<br>
+            <input type="checkbox" name="veiculo6" value="caminhada">
+            Caminhada<br>
+
+            <p>Quantidade de veículo que possui?</p>
+            <input type="number" name="quantidade" min="0" max="5"> <br><br>
+
+            Defina seu nível de satisfação com o transporte público:<br><br>
+            Pouco satisfeito
+            <input type="range" name="satisfacao" min="0" max="10">
+            Muito satisfeito <br><br>
+
+            <label> Insira seu Comentário sobre o Transito da cidade:</label> <br><br>
+            <textarea name="comenttario" placeholder= "Insira seu comentário..." required 
+            style="width:400px;height: 100px;"></textarea><br> <br>
+            
+            <input type="submit" value="Enviar Pesquisa">
+
+        </form>
+        
+    </body>
+</html>
